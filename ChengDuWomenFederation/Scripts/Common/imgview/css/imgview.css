@@ -1,0 +1,165 @@
+﻿.imgViewBody {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 90000;
+}
+
+.imgViewLeft {
+    position: absolute;
+    right: 120px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 5100;
+}
+
+.imgViewRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    background-color: #0a0a0a;
+    z-index: 5100;
+}
+
+.imgViewBox {
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    width: 100%;
+}
+
+.leftBottom {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5050;
+}
+
+.imgViewRight ul {
+    list-style: none;
+}
+
+.imgViewli {
+    width: 90px;
+    height: 50px;
+    border: 1px solid #373737;
+    margin-left: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.imgMiniBox {
+    max-height: 50px;
+    max-width: 90px;
+    outline: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.imgViewli:hover {
+    opacity: 1;
+}
+
+.imgclicksty {
+    border: 1px solid white;
+    opacity: 1;
+}
+
+.imgViewContent {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.viewBtn {
+    /*position:absolute;*/
+    width: 50px;
+    height: 50px;
+    float: right;
+    background-image: url(../img/viewbtn.png);
+}
+
+    .viewBtn:hover {
+        background-image: url(../img/viewbtn.png);
+        background-position: 50px 0;
+    }
+
+.imgIndex {
+    float: left;
+    margin-left: 40px;
+    margin-top: 15px;
+    color: white;
+    font-size: 16px;
+}
+
+    .imgIndex span {
+        color: white;
+        font-size: 16px;
+    }
+
+.leftBtn {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    width: 58px;
+    height: 58px;
+    border-radius: 32px;
+    border: 3px solid white;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.rightBtn {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 58px;
+    height: 58px;
+    border-radius: 32px;
+    border: 3px solid white;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    z-index: 100;
+}
+
+    .leftBtn:hover,
+    .rightBtn:hover {
+        opacity: 0.6;
+    }
+
+.leftBtnImg {
+    width: 16px;
+    height: 27px;
+    margin-left: 19px;
+    margin-top: 15px;
+    background-image: url(../img/lrbtn.png);
+}
+
+.rightBtnImg {
+    width: 16px;
+    height: 27px;
+    margin-left: 23px;
+    margin-top: 15px;
+    background-image: url(../img/lrbtn.png);
+    background-position: 16px 0;
+}
+
+.lastImg {
+    opacity: 0.3;
+}
+
+.imgSty {
+    vertical-align: middle;
+    width:auto;
+    height:auto;
+}

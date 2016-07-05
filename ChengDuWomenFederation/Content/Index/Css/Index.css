@@ -1,0 +1,346 @@
+﻿body {
+    padding: 0 0;
+    margin: 0 0;
+}
+
+#Index {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    font-family: 宋体;
+    overflow: hidden;
+}
+
+.mainTitle {
+    width: 100%;
+    height: 45px;
+    background-color: #2082C7;
+    color: white;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+.titleElement {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+}
+
+.title {
+    font-size: 22px;
+    text-align: left;
+    width: 450px;
+    text-indent: 10px;
+}
+
+.menuElement {
+    float: right;
+    font-size: 13px;
+    text-align: center;
+    height: 15px;
+    line-height: 15px;
+    border-right: 1px solid white;
+    margin-top: 15px;
+    width: 80px;
+}
+
+#management2ndMenu {
+    width: 80px;
+    height: 0px;
+    background-color: #085890;
+    position: relative;
+    top: 0px;
+    left: 40px;
+    /*border: 1px solid #085890;*/
+    z-index: 2016;
+}
+
+.management2ndFuncs {
+    width: 70px;
+    height: 29px;
+    margin-left: 5px;
+    border-bottom: 1px solid white;
+    color: white !important;
+    line-height: 29px;
+    text-align: center;
+    display: none;
+}
+
+    .management2ndFuncs:hover {
+        /*background-color:#1a679c;*/
+        color: rgb(255, 106, 0) !important;
+    }
+
+.welcome {
+    width: 180px;
+}
+
+.menuEs {
+    /*color:rgb(255, 0, 0);*/
+    cursor: pointer;
+}
+
+    .menuEs:hover {
+        color: rgb(255, 106, 0);
+    }
+
+.close {
+    border: none;
+}
+
+#Menu {
+    width: 280px;
+    border: 1px solid #085890;
+    position: absolute;
+    top: 45px;
+    left: -282px;
+    background-color: white;
+    z-index: 2015;
+    /*display: none;*/
+    font-family: 'Microsoft YaHei';
+    background-image: url(../Images/background.png);
+}
+
+#QueryStatistic {
+    z-index: 2015;
+    background-image: url(../Images/background.png);
+    position: absolute;
+    top: 45px;
+    /*left:282px;*/
+}
+
+#QueryStatisticTop {
+    height: 40px;
+    width: 100%;
+    font-size: 17px;
+    color: #085890;
+    text-align: left;
+    line-height: 40px;
+    text-indent: 8px;
+    font-weight: bolder;
+}
+
+#QueryResultChange {
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: underline;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#QueryStatisticBody {
+    width: 100%;
+    overflow: hidden;
+}
+
+.QueryStatisticResType {
+    width: 100%;
+    float: left;
+}
+
+#QueryStatisticChart {
+    display: none;
+}
+
+#QueryStatisticTable {
+    overflow-y: auto;
+}
+
+.QSTable {
+    border-collapse: collapse;
+    /*border:1px solid #6897b9;*/
+    width: 95%;
+    /*height: 95%;*/
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+    .QSTable tr th, .QSTable tr td {
+        border: 1px solid #6897b9;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+#MenuHead {
+    height: 40px;
+    background-color: #085890;
+    width: 100%;
+}
+
+#MenuTitle {
+    width: 220px;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-weight: bolder;
+    text-align: left;
+    text-indent: 5px;
+}
+
+.MenuTitleControls {
+    float: left;
+    color: white;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .MenuTitleControls:hover {
+        color: rgb(255, 106, 0);
+    }
+
+#MenuHide {
+    line-height: 37px;
+}
+
+#MenuShowBtn {
+    position: absolute;
+    top: 45px;
+    left: 0px;
+    z-index: 2015;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    background-color: #085890;
+    text-align: center;
+    line-height: 37px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#MenuBody {
+    width: 100%;
+}
+
+#queryDetailsRes {
+    width: 260px;
+    padding: 10px 10px;
+    display: none;
+}
+
+#MenuWait {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    background: url(../Images/wait.gif) no-repeat center rgba(57,57,57,0.8);
+    display: none;
+}
+
+#QueryStatisticResult {
+    border: 1px solid #D6D3D3;
+    height: 62px;
+    width: 505px;
+    position: absolute;
+    right: 0px;
+    background-color: white;
+    z-index: 2015;
+    /*display: none;*/
+    font-family: 'Microsoft YaHei';
+    background-image: url(../Images/background.png);
+}
+
+.QuerySTitle {
+    width: 100%;
+    height: 30px;
+    background-color: #085890;
+    border-bottom: 1px solid #6897b9;
+    text-align: center;
+    line-height: 31px;
+    /*text-indent: 8px;*/
+    color: white;
+    font-size: 13px;
+}
+
+.QuerySTitleA {
+    width: 100%;
+    height: 30px;
+    background-color: #085890;
+    border-bottom: 1px solid #6897b9;
+    text-align: left;
+    line-height: 31px;
+    text-indent: 8px;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#QSSDetailSelect {
+    float:left;
+}
+
+#QSSTitle {
+    width: 350px;
+    float: left;
+}
+
+.QSTThead {
+    float: left;
+    border-right: 1px solid #6897b9;
+}
+
+.QSTThead1 {
+    width: 100px;
+}
+
+.QSTThead2 {
+    width: 180px;
+}
+
+.QSTThead3 {
+    width: 150px;
+}
+
+.QSTThead4 {
+    width: 330px;
+}
+
+.noBRight {
+    border: none;
+    width: 330px;
+}
+
+.QuerySChildren {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #6897b9;
+    color: #333333;
+    cursor: pointer;
+    text-align: center;
+    line-height: 31px;
+    font-size: 12px;
+}
+
+    .QuerySChildren:hover {
+        background-color: #b8eed7;
+        border-bottom-color: #085890;
+    }
+
+.QuerySChildrenClicked {
+    background-color: #b8eed7;
+    border-bottom-color: #085890;
+    color: rgb(186, 69, 42);
+}
+
+#QSStatisticDetails {
+    float: right;
+    height: 30px;
+    text-align: center;
+    width: 100px;
+    text-decoration: underline;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+}

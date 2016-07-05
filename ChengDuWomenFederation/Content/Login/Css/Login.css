@@ -1,0 +1,124 @@
+﻿body {
+    padding: 0 0;
+    margin: 0 0;
+}
+
+#Login {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: url(../Images/bgnew.png) repeat-x;
+}
+
+#LoginWindow {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    width: 800px;
+    height: 526px;
+    /*background: url(../Images/center.png) no-repeat;*/
+    /*border:1px solid white;*/
+}
+
+#LoginControl {
+    width: 400px;
+    height: 180px;
+    /*border:1px solid #999999;*/
+    position: relative;
+    top: 180px;
+    left: 380px;
+    padding: 10px 10px;
+    border-radius:5px 5px;
+    box-shadow: 0 0 10px 0 rgba(255,255,255,0.5);
+}
+
+.LoginText {
+    width: 320px;
+    height: 32px;
+    margin-top: 20px;
+    margin-left:40px;
+    /*border-radius:5px 5px;*/
+    border: 1px solid #999999;
+    text-indent: 10px;
+    font-size: 15px;
+    color: #999999;
+    border-radius:5px 5px;
+    box-shadow: 0 0 10px 0 rgba(255,255,255,0.5);
+}
+
+#loginTips {
+    float: left;
+    width: 250px;
+    height: 29px;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #ff0000;
+    line-height: 29px;
+    text-indent: 8px;
+}
+
+#loginSubmit {
+    float: left;
+    width: 114px;
+    height: 29px;
+    background: url(../Images/login.png) no-repeat;
+    margin-left: 0px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+#backGround {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(../Images/earth.png) left bottom no-repeat;
+}
+
+#LoginTitle {
+    width: 100%;
+    height: 72px;
+    position: absolute;
+    top: 45px;
+    left: 0px;
+}
+
+#LTImg {
+    width: 72px;
+    height: 72px;
+    margin-left:45px;
+    float:left;
+    background: url(../Images/cdhbj.png) center no-repeat;
+}
+
+#LTText {
+    height:72px;
+    float:left;
+}
+
+.LTSubTitle {
+    height:36px;
+    font-size:32px;
+    font-family:STXinwei;
+    color:white;
+    line-height:36px;
+    text-align:left;
+    text-indent:12px;
+}
+
+.LTSubTitle1 {
+    font-size:20px;
+}
+
+#backG2 {
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    width:600px;
+    height:373px;
+    /*background: url(../Images/flower.png) center no-repeat;*/
+}

@@ -1,0 +1,270 @@
+﻿.MenuCommonElement {
+    width: 100%;
+    height: 35px;
+}
+
+.MenuElementsTitle {
+    line-height: 40px;
+    height: 35px;
+    text-align: left;
+    text-indent: 28px;
+    font-size: 13px;
+    color: #2B89DA;
+    background: url(../Images/RightArrow.png) no-repeat 8px 12px;
+}
+
+#QueryCity, #QueryCounty, #QueryType, #QueryProduct, .QueryYear, .QueryMiddle,
+#StatisticCity, #StatisticCounty, #StatisticType, #QueryEType {
+    float: left;
+    width: 120px;
+    height: 28px;
+    margin-left: 8px;
+    margin-top: 2px;
+    color: #056d47;
+}
+
+#QueryTown {
+    float: left;
+    width: 258px;
+    height: 28px;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+.sLabel {
+    color: #056d47;
+    font-size: 12px;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.sLabelAll {
+    color: #f5721c;
+}
+
+.sCheck {
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+#QueryCounty {
+    width: 130px;
+}
+
+#QueryType, #StatisticType, #QueryEType {
+    width: 258px;
+}
+
+
+#QueryProduct {
+    width: 254px;
+    height: 24px;
+    text-indent: 3px;
+}
+
+.QueryYear {
+    height: 24px;
+    text-align: center;
+    width: 106px;
+}
+
+.QueryMiddle {
+    margin-top: 0px;
+    width: 21px;
+    height: 32px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 32px;
+}
+
+#QuerySubmit, #Statistic {
+    float: right;
+    margin-right: 15px;
+    margin-top: 15px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    cursor: pointer;
+    background-color: #085890;
+    font-size: 13px;
+}
+
+.mj_queryRes_title {
+    width: 260px;
+    height: 30px;
+    font-size: 13px;
+    /*background-color: #E7EEF7;*/
+    line-height: 30px;
+    text-align: left;
+    text-indent: 5px;
+    border-bottom: 1px solid #D6D3D3;
+    /*box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);*/
+    color: #666666;
+}
+
+.mj_queryRes_bottom {
+    width: 260px;
+    height: 30px;
+    font-size: 13px;
+    /*background-color: #E7EEF7;*/
+    line-height: 30px;
+    text-align: left;
+    text-indent: 5px;
+    border-top: 1px solid #D6D3D3;
+}
+
+#queryResReturn {
+    height: 30px;
+    width: 50px;
+    float: right;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#queryResAll {
+    height: 30px;
+    width: 60px;
+    float: right;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.mj_Res_Element {
+    height: 95px;
+    width: 100%;
+    cursor: pointer;
+}
+
+    .mj_Res_Element:hover {
+        background-color: #D6D3D3;
+    }
+
+.mj_Res_ElementSelected {
+    background-color: #D6D3D3;
+}
+
+.mj_Res_e_mark {
+    float: left;
+    height: 95px;
+    width: 32px;
+}
+
+.mj_Res_e_mark_F {
+    background: url(../Images/Markers/F.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_C {
+    background: url(../Images/Markers/C.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_B {
+    background: url(../Images/Markers/B.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_R {
+    background: url(../Images/Markers/R.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_S {
+    background: url(../Images/Markers/S.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_W {
+    background: url(../Images/Markers/W.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_O {
+    background: url(../Images/Markers/O.png) no-repeat 0px 5px;
+}
+
+
+.mj_Res_e_mark_01 {
+    background: url(../Images/Markers/01-1.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_02 {
+    background: url(../Images/Markers/02-1.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_03 {
+    background: url(../Images/Markers/03-1.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_04 {
+    background: url(../Images/Markers/04-1.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_05 {
+    background: url(../Images/Markers/05-1.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_06 {
+    background: url(../Images/Markers/06-1.png) no-repeat 0px 5px;
+}
+
+.mj_Res_e_mark_07 {
+    background: url(../Images/Markers/07-1.png) no-repeat 0px 5px;
+}
+
+
+.mj_Res_e_body {
+    float: left;
+    height: 95px;
+    width: 219px;
+}
+
+.mj_details {
+    height: 30px;
+    width: 100%;
+    text-align: left;
+    text-indent: 3px;
+    font-size: 12px;
+    font-family: 宋体;
+}
+
+
+.mj_none {
+    display: none;
+}
+
+.mj_location {
+    color: #2d98e3;
+    line-height: 40px;
+}
+
+.mj_level {
+    color: #333333;
+    line-height: 30px;
+}
+
+.mj_auth {
+    color: #666666;
+    line-height: 20px;
+}
+
+.pageTipsMJ, .pageControlMJ {
+    float: left;
+    font-family: 宋体;
+    color: #666666;
+}
+
+.pageControlMJ {
+    cursor: pointer;
+}
+
+.mj_queryRes_content {
+    width: 260px;
+    overflow: auto;
+}
+
+.olPopupCloseBox {
+    background: url(../Images/close.png) no-repeat center;
+    cursor: pointer;
+}
