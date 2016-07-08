@@ -131,6 +131,7 @@ window.CDWF.Map = OpenLayers.Class({
 
         //this.limiteZoonLevel(2, 7);
         this.addProvinceBorder();
+        this.addJWDFoucusLine();
         CDWF.MapObj = this.mapobj;
         return this;
     },
@@ -204,6 +205,57 @@ window.CDWF.Map = OpenLayers.Class({
         var lineFeature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.LineString(pointList), null, featureStyle); //形成区元素
         boderLayer.addFeatures([lineFeature]);
         this.mapobj.addLayer(boderLayer);
+    },
+
+    //添加经纬度交汇线
+    addJWDFoucusLine: function () {
+        var that = this;
+        var boderLayer = new OpenLayers.Layer.Vector('jwdFocusLine');
+        //元素样式
+        var featureStyle = {
+            strokeColor: "yellow",
+            fillColor: "yellow",
+            fillOpacity: 1,
+            strokeWidth: 2,
+            pointerEvents: "visiblePainted"
+        };
+        //交汇点
+        var focusPnt = CDWF.MarkerSettings.position;
+
+        var jxLinePntsList = [];
+
+        for (var i = -90; i <= 90; i = i + 0.1) {
+            jxLinePntsList.push(new OpenLayers.Geometry.Point(focusPnt.x, i))
+        }
+
+        var wxLinePntsList = [];
+
+        for (var j = -180; j <= 180; j = j + 0.1) {
+            wxLinePntsList.push(new OpenLayers.Geometry.Point(j, focusPnt.y));
+        }
+
+        var jxLine = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.LineString(jxLinePntsList), null, CDWF.MarkerSettings.featureStyle);
+        var wxLine = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.LineString(wxLinePntsList), null, CDWF.MarkerSettings.featureStyle);
+        boderLayer.addFeatures([jxLine, wxLine]);
+        this.mapobj.addLayer(boderLayer);
+        //添加文字
+        var textFeature = this.createText({
+            x: CDWF.MarkerSettings.position.x,
+            y: CDWF.MarkerSettings.position.y,
+            name: CDWF.MarkerSettings.position.x + "," + CDWF.MarkerSettings.position.y,
+            color: "#FFFC04"
+        });
+        //添加GIF
+        var markerslayer = new OpenLayers.Layer.Markers("GIFMarkers");
+
+        var markersSize = CDWF.MarkerSettings.markerSize;
+        var size = new OpenLayers.Size(markersSize.w , markersSize.h );
+        var offset = new OpenLayers.Pixel(-(size.w / 2), -(size.h / 2));
+        var icon = new OpenLayers.Icon(baseUrl + CDWF.MarkerSettings.url, size, offset);
+        var marker = new OpenLayers.Marker(new OpenLayers.LonLat(CDWF.MarkerSettings.position.x, CDWF.MarkerSettings.position.y), icon.clone());
+        marker.id = "initGifMarker";
+        markerslayer.addMarker(marker);
+        this.mapobj.addLayer(markerslayer);
     },
 
     //创建Marker

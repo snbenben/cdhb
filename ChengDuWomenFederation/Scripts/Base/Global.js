@@ -15,21 +15,45 @@
     MarkerLayer: null,
     MarkerLastSelected: null,
     TextArr: [],
-    
+    MarkerSettings: {
+        //经纬焦点marker图标路径
+        url: "Content/Index/Images/marker_red.gif",
+        //marker图标实际像素大小
+        markerSize: {
+            w: 16,
+            h: 16
+        },
+        //要交汇在哪个点
+        position: {
+            x: 104.06258321778,
+            y: 30.662272573243
+        },
+        //经纬线样式
+        featureStyle: {
+            //颜色
+            strokeColor: "yellow",
+            fillColor: "yellow",
+            fillOpacity: 1,
+            //线宽
+            strokeWidth: 2,
+            pointerEvents: "visiblePainted"
+        }
+    },
+
     //自定义图层配置，同步修改TreeNode配置
     CustomLayer: [
-       
+
         {
             name: 'arcgisTest2',
             treeName: '2016-6-13',
-            url: 'http://localhost:6080/arcgis/rest/services/MyMapService666/MapServer/export',
+            url: 'http://localhost:6080/arcgis/rest/services/MyMapService1/MapServer/export',
             isBaseLayer: false,
             isVisiable: false
         },
         {
             name: 'arcgisTest3',
             treeName: '2016-5-24',
-            url: 'http://localhost:6080/arcgis/rest/services/MyMapService11/MapServer/export',
+            url: 'http://localhost:6080/arcgis/rest/services/MyMapService1/MapServer/export',
             isBaseLayer: false,
             isVisiable: false
         },
@@ -43,7 +67,7 @@
 					    name: "5月",
 					    open: true,
 					    children: [
-							
+
                             { name: "2016-5-24", layerName: "arcgisTest3", checked: false }
 					    ]
 					},
@@ -129,7 +153,7 @@ window.EPClassify = [
                  jd: 104.2087633,
                  wd: 30.7103505,
                  num: 'B-1',
-                 imgArr: "DSC00073.JPG#DSC00073-1.JPG"
+                 imgArr: "1.jpg#2.jpg#3.jpg"
              },
     {//2
         name: 'B-2黑斑，焚烧痕迹',
@@ -252,8 +276,8 @@ window.EPClassify = [
         jd: 104.2161834,
         wd: 30.6787145,
         num: 'R-1',
-        imgArr: "DSC00041.JPG#DSC00041-2.JPG"
-    },{//14
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
+    }, {//14
         name: 'R-2施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
         hps: '成都市',
@@ -264,7 +288,7 @@ window.EPClassify = [
         jd: 104.2054601,
         wd: 30.7104945,
         num: 'R-1',
-        imgArr: "DSC00079.JPG#DSC00079-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//15
         name: 'R-3施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -276,7 +300,7 @@ window.EPClassify = [
         jd: 104.2082002,
         wd: 30.697371,
         num: 'R-3',
-        imgArr: "DSC00092.JPG#DSC00092-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//16
         name: 'R-4施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -288,7 +312,7 @@ window.EPClassify = [
         jd: 104.2047963,
         wd: 30.698148,
         num: 'R-4',
-        imgArr: "DSC00133.JPG#DSC00133-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//17
         name: 'R-5施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -300,7 +324,7 @@ window.EPClassify = [
         jd: 104.1782397,
         wd: 30.7125982,
         num: 'R-5',
-        imgArr: "DSC00444.JPG#DSC00444-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//19
         name: 'R-6施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -312,7 +336,7 @@ window.EPClassify = [
         jd: 104.1622987,
         wd: 30.7019189,
         num: 'R-6',
-        imgArr: "DSC00663.JPG#DSC00663-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//20
         name: 'R-7施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -324,7 +348,7 @@ window.EPClassify = [
         jd: 104.142592,
         wd: 30.7106347,
         num: 'R-7',
-        imgArr: "DSC00699.JPG#DSC00699-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//21
         name: 'R-8施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -336,7 +360,7 @@ window.EPClassify = [
         jd: 104.1856046,
         wd: 30.7208532,
         num: 'R-8',
-        imgArr: "DSC00986.JPG#DSC00986-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//22
         name: 'R-9施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -389,7 +413,7 @@ window.EPClassify = [
                 jd: 104.2113153,
                 wd: 30.6984246,
                 num: 'S-1',
-                imgArr: "DSC00061.JPG#DSC00061-2.JPG"
+                imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
             }, {//13
                 name: 'S-2涉土露天垃圾场',
                 hpsj: '2016-06-13',
@@ -401,7 +425,7 @@ window.EPClassify = [
                 jd: 104.2102412,
                 wd: 30.7033966,
                 num: 'S-2',
-                imgArr: "DSC00066.JPG#DSC00066-1.JPG"
+                imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
             }, {//18
                 name: 'S-3涉土露天垃圾场',
                 hpsj: '2016-06-12',
@@ -413,18 +437,18 @@ window.EPClassify = [
                 jd: 104.1690488,
                 wd: 30.7114235,
                 num: 'S-3',
-                imgArr: "DSC00531.JPG#DSC00531-1.JPG"
+                imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
             }
         ]
     }, {
         mingcheng: "涉水问题",
         details: [
-            
+
         ]
     }, {
         mingcheng: "其它问题",
         details: [
-            
+
         ]
     }
 ];
@@ -441,7 +465,7 @@ window.EProblemEX = [
         jd: 104.2087633,
         wd: 30.7103505,
         num: 'B-1',
-        imgArr: "DSC00073.JPG#DSC00073-1.JPG"
+        imgArr: "1.jpg#2.jpg#3.jpg"
     },
     {//2
         name: 'B-2黑斑，焚烧痕迹',
@@ -564,7 +588,7 @@ window.EProblemEX = [
         jd: 104.2161834,
         wd: 30.6787145,
         num: 'R-1',
-        imgArr: "DSC00041.JPG#DSC00041-2.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//12
         name: 'S-1涉土露天垃圾场',
         hpsj: '2016-06-11',
@@ -576,7 +600,7 @@ window.EProblemEX = [
         jd: 104.2113153,
         wd: 30.6984246,
         num: 'S-1',
-        imgArr: "DSC00061.JPG#DSC00061-2.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//13
         name: 'S-2涉土露天垃圾场',
         hpsj: '2016-06-13',
@@ -588,7 +612,7 @@ window.EProblemEX = [
         jd: 104.2102412,
         wd: 30.7033966,
         num: 'S-2',
-        imgArr: "DSC00066.JPG#DSC00066-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//14
         name: 'R-2施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -600,7 +624,7 @@ window.EProblemEX = [
         jd: 104.2054601,
         wd: 30.7104945,
         num: 'R-1',
-        imgArr: "DSC00079.JPG#DSC00079-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//15
         name: 'R-3施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -612,7 +636,7 @@ window.EProblemEX = [
         jd: 104.2082002,
         wd: 30.697371,
         num: 'R-3',
-        imgArr: "DSC00092.JPG#DSC00092-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//16
         name: 'R-4施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -624,7 +648,7 @@ window.EProblemEX = [
         jd: 104.2047963,
         wd: 30.698148,
         num: 'R-4',
-        imgArr: "DSC00133.JPG#DSC00133-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//17
         name: 'R-5施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -636,7 +660,7 @@ window.EProblemEX = [
         jd: 104.1782397,
         wd: 30.7125982,
         num: 'R-5',
-        imgArr: "DSC00444.JPG#DSC00444-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//18
         name: 'S-3涉土露天垃圾场',
         hpsj: '2016-06-12',
@@ -648,7 +672,7 @@ window.EProblemEX = [
         jd: 104.1690488,
         wd: 30.7114235,
         num: 'S-3',
-        imgArr: "DSC00531.JPG#DSC00531-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//19
         name: 'R-6施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -660,7 +684,7 @@ window.EProblemEX = [
         jd: 104.1622987,
         wd: 30.7019189,
         num: 'R-6',
-        imgArr: "DSC00663.JPG#DSC00663-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//20
         name: 'R-7施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -672,7 +696,7 @@ window.EProblemEX = [
         jd: 104.142592,
         wd: 30.7106347,
         num: 'R-7',
-        imgArr: "DSC00699.JPG#DSC00699-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//21
         name: 'R-8施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
@@ -684,7 +708,7 @@ window.EProblemEX = [
         jd: 104.1856046,
         wd: 30.7208532,
         num: 'R-8',
-        imgArr: "DSC00986.JPG#DSC00986-1.JPG"
+        imgArr: "DSC00073-1.jpg#DSC00073-2.jpg#DSC00073-3.jpg"
     }, {//22
         name: 'R-9施工、扬尘问题露天沙场',
         hpsj: '2016-06-13',
