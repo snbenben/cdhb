@@ -5590,8 +5590,10 @@
     <Content Include="Content\clip\IMG6\Row9\9_7.jpg" />
     <Content Include="Content\clip\IMG6\Row9\9_8.jpg" />
     <Content Include="Content\clip\IMG6\Row9\9_9.jpg" />
+    <Content Include="Content\Index\Images\111.gif" />
     <Content Include="Content\Index\Css\Index.css" />
     <Content Include="Content\Index\Css\ProjectQuery.css" />
+    <Content Include="Content\Index\Images\2222.gif" />
     <Content Include="Content\Index\Images\background.png" />
     <Content Include="Content\Index\Images\close.png" />
     <Content Include="Content\Index\Images\green.png" />
@@ -5620,6 +5622,7 @@
     <Content Include="Content\Index\Images\Markers\S.png" />
     <Content Include="Content\Index\Images\Markers\W.png" />
     <Content Include="Content\Index\Images\Markers\yellow.png" />
+    <Content Include="Content\Index\Images\marker_red.gif" />
     <Content Include="Content\Index\Images\red.png" />
     <Content Include="Content\Index\Images\mark.png" />
     <Content Include="Content\Index\Images\RightArrow.png" />

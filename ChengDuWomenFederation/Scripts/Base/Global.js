@@ -17,11 +17,11 @@
     TextArr: [],
     MarkerSettings: {
         //经纬焦点marker图标路径
-        url: "Content/Index/Images/marker_red.gif",
+        url: "Content/Index/Images/2222.gif",
         //marker图标实际像素大小
         markerSize: {
-            w: 16,
-            h: 16
+            w: 440,
+            h: 316
         },
         //要交汇在哪个点
         position: {
@@ -46,14 +46,14 @@
         {
             name: 'arcgisTest2',
             treeName: '2016-6-13',
-            url: 'http://localhost:6080/arcgis/rest/services/MyMapService1/MapServer/export',
+            url: 'http://localhost:6080/arcgis/rest/services/MyMapService666/MapServer/export',
             isBaseLayer: false,
             isVisiable: false
         },
         {
             name: 'arcgisTest3',
             treeName: '2016-5-24',
-            url: 'http://localhost:6080/arcgis/rest/services/MyMapService1/MapServer/export',
+            url: 'http://localhost:6080/arcgis/rest/services/MyMapService11/MapServer/export',
             isBaseLayer: false,
             isVisiable: false
         },
