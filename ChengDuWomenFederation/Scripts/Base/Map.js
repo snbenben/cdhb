@@ -50,7 +50,11 @@ window.CDWF.Map = OpenLayers.Class({
         this.mapobj = new OpenLayers.Map(mapid, {
             maxExtent: new OpenLayers.Bounds(-180, -90, 180, 90),
             controls: [mapNav],
-            numZoomLevels: 30
+            numZoomLevels: 30,
+            eventListeners: {
+                "moveend": this.mapEvent,
+                "zoomend": this.mapEvent,
+            }
         });
         ////影像
         //var tidituLayerYX = new Zondy.Map.TianDiTuLayer("天地图影像", {
@@ -143,6 +147,68 @@ window.CDWF.Map = OpenLayers.Class({
                 (zoomLevel >= 0) && // 最小级
                 (zoomLevel < 8));
         }
+    },
+
+    mapEvent: function (event) {
+
+        //alert(event.type)
+        var center = event.object.getCenter();
+        var extent = event.object.getExtent();
+        var nowZoom = event.object.getZoom();
+        var nowResolution = event.object.getResolution();
+
+        //如果目标点位的经度、纬度均不在当前extent内，则不显示经线、纬线Text
+        var targetPnt = CDWF.MarkerSettings.position;
+        $("#LongitudeText").text("东经：" + targetPnt.x.toString().substr(0, 6) + "度");
+        $("#LatitudeText").text("北纬：" + targetPnt.y.toString().substr(0, 5) + "度");
+        if (targetPnt.x < extent.left && targetPnt.y > extent.top) {
+            $(".jiweiText").hide();
+            return;
+        }
+        if (targetPnt.x < extent.left && targetPnt.y < extent.bottom) {
+            $(".jiweiText").hide();
+            return;
+        }
+        if (targetPnt.x > extent.right && targetPnt.y > extent.top) {
+            $(".jiweiText").hide();
+            return;
+        }
+        if (targetPnt.x > extent.right && targetPnt.y < extent.bottom) {
+            $(".jiweiText").hide();
+            return;
+        }
+        //目标点位经线在视窗范围内
+        if (targetPnt.x >= extent.left && targetPnt.x <= extent.right && (targetPnt.y > extent.top || targetPnt.y < extent.bottom)) {
+            var minusRes = targetPnt.x - extent.left;
+            var juli = minusRes / nowResolution;
+            $(".jiweiText").hide();
+            $("#LongitudeText").css({
+                left: juli + "px"
+            }).show();
+            return;
+        }
+        //目标点位纬线在视窗范围内
+        if (targetPnt.y >= extent.bottom && targetPnt.y <= extent.top && (targetPnt.x > extent.right || targetPnt.x < extent.left)) {
+            var minusRes = extent.top - targetPnt.y;
+            var juli = minusRes / nowResolution + 45;
+            $(".jiweiText").hide();
+            $("#LatitudeText").css({
+                top: juli + "px"
+            }).show();
+            return;
+        }
+        //经纬线都在
+        var minusResLon = targetPnt.x - extent.left;
+        var juliLon = minusResLon / nowResolution;
+        $("#LongitudeText").css({
+            left: juliLon + "px"
+        }).show();
+
+        var minusResLat = extent.top - targetPnt.y;
+        var juliLat = minusResLat / nowResolution + 45;
+        $("#LatitudeText").css({
+            top: juliLat + "px"
+        }).show();
     },
 
     limiteZoonLevel: function (minLevel, maxLevel) {
@@ -239,17 +305,17 @@ window.CDWF.Map = OpenLayers.Class({
         boderLayer.addFeatures([jxLine, wxLine]);
         this.mapobj.addLayer(boderLayer);
         //添加文字
-        var textFeature = this.createText({
-            x: CDWF.MarkerSettings.position.x,
-            y: CDWF.MarkerSettings.position.y,
-            name: CDWF.MarkerSettings.position.x + "," + CDWF.MarkerSettings.position.y,
-            color: "#FFFC04"
-        });
+        //var textFeature = this.createText({
+        //    x: CDWF.MarkerSettings.position.x,
+        //    y: CDWF.MarkerSettings.position.y,
+        //    name: CDWF.MarkerSettings.position.x + "," + CDWF.MarkerSettings.position.y,
+        //    color: "#FFFC04"
+        //});
         //添加GIF
         var markerslayer = new OpenLayers.Layer.Markers("GIFMarkers");
 
         var markersSize = CDWF.MarkerSettings.markerSize;
-        var size = new OpenLayers.Size(markersSize.w , markersSize.h );
+        var size = new OpenLayers.Size(markersSize.w, markersSize.h);
         var offset = new OpenLayers.Pixel(-(size.w / 2), -(size.h / 2));
         var icon = new OpenLayers.Icon(baseUrl + CDWF.MarkerSettings.url, size, offset);
         var marker = new OpenLayers.Marker(new OpenLayers.LonLat(CDWF.MarkerSettings.position.x, CDWF.MarkerSettings.position.y), icon.clone());

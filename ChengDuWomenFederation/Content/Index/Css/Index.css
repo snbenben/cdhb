@@ -344,3 +344,24 @@
     color: white;
     cursor: pointer;
 }
+
+.jiweiText {
+    position:absolute;
+    width:150px;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+    /*background-color:rgb(255, 106, 0);*/
+    z-index:9999;
+    color:#FFFC04;
+}
+
+#LongitudeText {
+    top:45px;
+    left:100px;
+}
+
+#LatitudeText {
+    right:0px;
+    bottom:0px;
+}
