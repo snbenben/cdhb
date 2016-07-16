@@ -17,16 +17,16 @@
     TextArr: [],
     MarkerSettings: {
         //经纬焦点marker图标路径
-        url: "Content/Index/Images/2222.gif",
+        url: "Content/Index/Images/red.gif",
         //marker图标实际像素大小
         markerSize: {
-            w: 440,
-            h: 316
+            w: 44,
+            h: 32
         },
         //要交汇在哪个点
         position: {
-            x: 104.06258321778,
-            y: 30.662272573243
+            x: 104.2116246238,
+            y: 30.577182140
         },
         //经纬线样式
         featureStyle: {
